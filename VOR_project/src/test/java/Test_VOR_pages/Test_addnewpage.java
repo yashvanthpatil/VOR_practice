@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 import VOR_Base.VOR_base_class1;
 import VOR_Pages.Homepage_vor;
 import VOR_Pages.Login_page_vor;
-import VOR_Pages.Vor_report;
+import VOR_Pages.Add_new_page_vor;
 
-public class Test_vor_report extends VOR_base_class1 {
+public class Test_addnewpage extends VOR_base_class1 {
 			
 	@Test
 	public void vor_report_test() throws InterruptedException {
@@ -40,7 +40,7 @@ public class Test_vor_report extends VOR_base_class1 {
 	hp.clickvorreport();
 	Thread.sleep(2000);
 	hp.movetomenu();
-	Vor_report vr=new Vor_report(driver);
+	Add_new_page_vor vr=new Add_new_page_vor(driver);
 	vr.Add_new();
 	vr.logg_date();
 	 Thread.sleep(3000);

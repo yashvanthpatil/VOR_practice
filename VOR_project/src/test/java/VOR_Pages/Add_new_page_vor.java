@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Vor_report {
+public class Add_new_page_vor {
 		
 	@FindBy(xpath = "//button[.=\" Add new \"]")
 	private WebElement addnew_btn;
@@ -33,7 +33,7 @@ public class Vor_report {
 	private WebElement enter_custName;
 	
 	
-	public Vor_report(WebDriver driver) {
+	public Add_new_page_vor(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 	
