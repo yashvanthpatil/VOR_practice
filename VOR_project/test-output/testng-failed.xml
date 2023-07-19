@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test_VOR_pages.TestHomepage_actions">
+      <class name="Test_VOR_pages.Test_Add_new">
         <methods>
+          <include name="Add_new_test"/>
           <include name="startup"/>
-          <include name="homepagetest"/>
+          <include name="quite"/>
         </methods>
-      </class> <!-- Test_VOR_pages.TestHomepage_actions -->
+      </class> <!-- Test_VOR_pages.Test_Add_new -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

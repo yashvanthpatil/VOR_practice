@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-12T21:43:19 IST" name="Default suite" finished-at="2023-07-12T21:44:02 IST" duration-ms="43657">
+  <suite started-at="2023-07-19T17:51:21 IST" name="Default suite" finished-at="2023-07-19T17:52:10 IST" duration-ms="49372">
     <groups>
     </groups>
-    <test started-at="2023-07-12T21:43:19 IST" name="Default test" finished-at="2023-07-12T21:44:02 IST" duration-ms="43657">
-      <class name="Test_VOR_pages.Test_Homepage">
-        <test-method is-config="true" signature="startup()[pri:0, instance:Test_VOR_pages.Test_Homepage@22e357dc]" started-at="2023-07-12T21:43:19 IST" name="startup" finished-at="2023-07-12T21:43:23 IST" duration-ms="4541" status="PASS">
+    <test started-at="2023-07-19T17:51:21 IST" name="Default test" finished-at="2023-07-19T17:52:10 IST" duration-ms="49372">
+      <class name="Test_VOR_pages.Test_Add_new">
+        <test-method is-config="true" signature="startup()[pri:0, instance:Test_VOR_pages.Test_Add_new@49c7b90e]" started-at="2023-07-19T17:51:21 IST" name="startup" finished-at="2023-07-19T17:51:30 IST" duration-ms="8696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method signature="homepagetest()[pri:0, instance:Test_VOR_pages.Test_Homepage@22e357dc]" started-at="2023-07-12T21:43:23 IST" name="homepagetest" finished-at="2023-07-12T21:44:02 IST" duration-ms="39054" status="PASS">
+        <test-method signature="Add_new_test()[pri:0, instance:Test_VOR_pages.Test_Add_new@49c7b90e]" started-at="2023-07-19T17:51:30 IST" name="Add_new_test" finished-at="2023-07-19T17:52:10 IST" duration-ms="40612" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homepagetest -->
-        <test-method is-config="true" signature="quite()[pri:0, instance:Test_VOR_pages.Test_Homepage@22e357dc]" started-at="2023-07-12T21:44:02 IST" name="quite" finished-at="2023-07-12T21:44:02 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- Add_new_test -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:Test_VOR_pages.Test_Add_new@49c7b90e]" started-at="2023-07-19T17:52:10 IST" name="quite" finished-at="2023-07-19T17:52:10 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quite -->
-      </class> <!-- Test_VOR_pages.Test_Homepage -->
+      </class> <!-- Test_VOR_pages.Test_Add_new -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

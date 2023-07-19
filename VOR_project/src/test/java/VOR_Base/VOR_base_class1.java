@@ -10,11 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import java.util.Random;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class VOR_base_class1 {
-    public WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeMethod
     public void startup() {
@@ -36,9 +37,17 @@ public class VOR_base_class1 {
     }
     
    
+
+    public void RandomNumberGenerator(int min, int max) {
+            Random random = new Random();
+            int randomnumber= random.nextInt(max - min + 1) + min;
+            System.out.println("random number is :  "+ randomnumber);
+        }
+    
+
     
     
-    public void waittill(WebElement ele) {
+    public static void waittill(WebElement ele) {
         WebDriverWait wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOf(ele)).click();
     }
