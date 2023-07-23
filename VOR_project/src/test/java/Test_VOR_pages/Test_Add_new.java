@@ -33,19 +33,23 @@ public class Test_Add_new extends VOR_base_class1 {
 		Thread.sleep(3000);
 		System.out.println("1 time execution completed");
 		driver.switchTo().window(parent);
+		driver.navigate().refresh();
 		Thread.sleep(10000);
 		Homepage_vor hp = new Homepage_vor(driver);
 		hp.movetomenu();
 		System.out.println("expanded the nav bar");
-		waitfor(8000);
+		waitfor(2000);
 		hp.clickvorreport();
 		Thread.sleep(5000);
 		hp.movetomenu();
 		Addnew_btn_vor<WebElement> ad = new Addnew_btn_vor<>(driver);
 		ad.clik_add_new();
+		ad.selectdate();
 		ad.select_cust();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		ad.enter_remarks();
+		ad.selectetc_date();
+		ad.click_submit();
 		
 	}
 
