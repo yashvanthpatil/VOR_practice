@@ -2,10 +2,13 @@ package VOR_Base;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.ScrollAction;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -17,6 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class VOR_base_class1 {
     public static WebDriver driver;
+    Actions act;
 
     @BeforeMethod
     public void startup() {
@@ -36,6 +40,20 @@ public class VOR_base_class1 {
     	Actions act = new Actions(driver);
     	 act.moveToElement(ele).build().perform();
     }
+    public boolean isElementClickable(WebElement element) {
+        try {
+            return element.isEnabled() && element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void scrollPageDown() {
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 500);");
+    	
+    }
+    
     
     public void sleep_time(int q) throws InterruptedException {
     	Thread.sleep(q);
@@ -54,14 +72,15 @@ public class VOR_base_class1 {
     
     public static void waittill(WebElement ele) {
         WebDriverWait wait = new WebDriverWait(driver, 50);
+        wait.until(ExpectedConditions.visibilityOf(ele)).click();
         wait.until(ExpectedConditions.elementToBeClickable(ele)).click();
-        //wait.until(ExpectedConditions.visibilityOf(ele)).click();
     }
     
     public void actions_perform(WebElement Act_ele) {
-    	Actions act = new Actions(driver);
+    	act = new Actions(driver);
     	act.moveToElement(Act_ele).click().build().perform();
     }
+   
 
     @AfterMethod
     public void quite() {
