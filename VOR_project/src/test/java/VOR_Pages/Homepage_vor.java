@@ -19,7 +19,7 @@ public class Homepage_vor extends VOR_base_class1 {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void movetomenu() throws InterruptedException {
+	public void movetomenu()  {
 		navigationbar.click();
 		
 	}

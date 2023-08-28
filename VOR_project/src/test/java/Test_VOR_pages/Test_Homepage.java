@@ -12,7 +12,8 @@ import VOR_Pages.Login_page_vor;
 public class Test_Homepage extends VOR_base_class1{
 		
 	@Test
-	public void homepagetest() throws InterruptedException {
+	public void homepagetest() throws InterruptedException 
+	{
 		Login_page_vor lvor = new Login_page_vor(driver);
         lvor.click_login_link();
         Set<String> windows = driver.getWindowHandles();
